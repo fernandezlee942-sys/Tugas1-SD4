@@ -9,16 +9,21 @@ int main(){
 
     int n=string.length();
     
+    //sort based on the ascii code
     for(int i=1;i<n;i++){
         int key = string[i];
         int j = i-1;
         
-        //sort based on the ascii code
+        std::cout<<"Siklus "<<i<<": "<<"\n";
+
         while((j>=0) && (string[j] > key)){
             string[j+1] = string[j];
             j--;
+            std::cout<<" (Geser) jadi: "<<string<<"\n";
         }
+
         string[j+1]=key;
+        std::cout<<"Hasil Siklus "<<i<<": "<<string<<"\n";
     }
 
     std::cout<<"Hasil Insertion Sort: ";
